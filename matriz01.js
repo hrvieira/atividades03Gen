@@ -1,4 +1,13 @@
-const matriz = [[1,2,3],[4,5,6],[7,8,9]];
+const leia = require('readline-sync');
+let matriz = new Array(3)
+// const matriz = [[1,2,3],[4,5,6],[7,8,9]];
+
+for(let iLinha = 0; iLinha < matriz.length; iLinha ++){
+     matriz[iLinha] = new Array(3);
+     for(let iColuna = 0; iColuna < matriz.length; iColuna ++){
+          matriz[iLinha][iColuna] = leia.questionInt(`Digite um número[${iLinha}][${iColuna}]:\n`)
+     }
+}
 
 console.table(matriz);
 let somaPrincipal = 0, somaSecundaria = 0;
